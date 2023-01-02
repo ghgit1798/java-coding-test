@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+// straight insertionSort 장점 : 이미 정렬이 되었거나, 정렬된 상태에 가까울수록 매우 빠름
+// straight insertionSort 단점 : 삽입할 곳이 멀리 떨어지면 이동(대입) 횟수가 많음
+
 public class InsertionSort {
     // 단순 삽입 정렬
     static void insertionSort(int[] a, int n) {
