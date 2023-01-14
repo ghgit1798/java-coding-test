@@ -5,8 +5,7 @@ public class QuickSort2 {
         int t = a[idx1]; a[idx1] = a[idx2]; a[idx2] = t;
     }
 
-    // 퀵 정렬(비재귀 버전)
-    static void quickSort(int[] a, int left, int right) {
+    static void quickSor(int[] a, int left, int right) {
         IntStack lstack = new IntStack(right - left + 1);
         IntStack rstack = new IntStack(right - left + 1);
 
@@ -14,13 +13,13 @@ public class QuickSort2 {
         rstack.push(right);
 
         while(lstack.isEmpty() != true) {
-            int pl = left=lstack.pop();
-            int pr = right=rstack.pop();
+            int pl = left = lstack.pop();
+            int pr = right = rstack.pop();
             int x = a[(left+right)/2];
 
             do {
-                while(a[pl]<x) pl++;
-                while(a[pr]>x) pr--;
+                while(a[pl] < x) pl++;
+                while(a[pr] > x) pr--;
                 if(pl <= pr)
                     swap(a, pl++, pr--);
             } while(pl <= pr);
@@ -29,7 +28,7 @@ public class QuickSort2 {
                 lstack.push(left);
                 rstack.push(pr);
             }
-            if(pl<right) {
+            if(pl < right) {
                 lstack.push(pl);
                 rstack.push(right);
             }

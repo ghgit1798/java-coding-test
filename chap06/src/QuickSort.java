@@ -11,14 +11,14 @@ public class QuickSort {
         int x = a[(pl+pr)/2];
 
         do {
-            while(a[pl]<x) pl++;
-            while(a[pr]>x) pr--;
-            if(pl <= pr)
+            while (a[pl] < x) pl++;
+            while (a[pr] > x) pr--;
+            if (pl <= pr)
                 swap(a, pl++, pr--);
-        } while(pl <= pr);
+        } while (pl <= pr);
 
-        if(left<pr) quickSort(a, left, pr);
-        if(pl<right) quickSort(a, pl, right);
+        if(left < pr) quickSort(a, left, pr);
+        if(pl < right) quickSort(a, pl, right);
     }
 
     public static void main(String[] args) {
