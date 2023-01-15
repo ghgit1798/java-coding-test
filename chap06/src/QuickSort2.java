@@ -5,7 +5,7 @@ public class QuickSort2 {
         int t = a[idx1]; a[idx1] = a[idx2]; a[idx2] = t;
     }
 
-    static void quickSor(int[] a, int left, int right) {
+    static void quickSort(int[] a, int left, int right) {
         IntStack lstack = new IntStack(right - left + 1);
         IntStack rstack = new IntStack(right - left + 1);
 
